@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napha | Data Analyst Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tight text-blue-600 dark:text-blue-500">
+                    Napha.data
+                </div>
+                <div class="hidden md:flex items-center">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium">
+                        <a href="#hero" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                        <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+                        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+                        <a href="#contact" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                    <!-- Theme Toggle (Desktop) -->
+                    <button id="theme-toggle" class="ml-8 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Theme Toggle (Mobile) -->
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                        <!-- Icons will be synced via JS -->
+                        <svg class="theme-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20"></svg>
+                    </button>
+                    <button id="mobile-menu-button" class="text-slate-500 hover:text-slate-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-1 shadow-lg">
+            <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-500 font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-blue-600 dark:text-blue-500 font-semibold tracking-wide uppercase text-sm mb-4">Data Analyst & Insight Seeker</h2>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                    Turning Complex Data Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">Actionable Insights</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+                    Hi, I'm Napha. I specialize in statistical analysis, data visualization, and helping businesses make data-driven decisions.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#experience" class="px-8 py-3 rounded-xl bg-slate-900 dark:bg-blue-600 text-white font-medium hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg shadow-slate-200 dark:shadow-none">
+                        View Experience
+                    </a>
+                    <a href="#contact" class="px-8 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="aspect-square rounded-3xl bg-slate-100 dark:bg-slate-800 overflow-hidden shadow-2xl">
+                            <!-- Placeholder for profile image -->
+                            <div class="w-full h-full flex items-center justify-center text-slate-300 dark:text-slate-600">
+                                <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-3xl -z-10 opacity-10 dark:opacity-20"></div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-slate-900 dark:text-white">About Me</h2>
+                        <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p>
+                                I am a passionate Data Analyst with a strong foundation in mathematics and statistics. My journey in data science began with a curiosity about how numbers can tell stories and predict future trends.
+                            </p>
+                            <p>
+                                With experience in clean, processing, and analyzing large datasets, I've helped organizations optimize their workflows and identify new growth opportunities. I believe that the best insights come from a combination of technical rigor and domain expertise.
+                            </p>
+                            <p>
+                                When I'm not diving into spreadsheets or writing SQL queries, you'll find me exploring new data visualization techniques or reading about the latest trends in machine learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-slate-50 dark:bg-slate-950">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12 text-slate-900 dark:text-white text-center">Professional Journey</h2>
+                <div class="space-y-8 max-w-3xl mx-auto">
+                    <!-- Job 1 -->
+                    <div class="relative pl-8 border-l-2 border-blue-200 dark:border-blue-900 pb-8">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50 dark:border-slate-950"></div>
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Data Analyst</h3>
+                            <span class="text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full">2021 — Present</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 font-medium">Insights Global Corp</p>
+                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-400">
+                            <li>Leading data-driven strategy sessions with executive leadership to define key performance indicators (KPIs).</li>
+                            <li>Automated 40% of manual reporting workflows using Python and SQL, saving the team 20+ hours weekly.</li>
+                            <li>Developed predictive models for customer churn, improving retention by 15% within the first year.</li>
+                        </ul>
+                    </div>
+                    <!-- Job 2 -->
+                    <div class="relative pl-8 border-l-2 border-blue-200 dark:border-blue-900 pb-8">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full border-4 border-slate-50 dark:border-slate-950"></div>
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Junior Data Analyst</h3>
+                            <span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">2019 — 2021</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 font-medium">FinTech Solutions Ltd.</p>
+                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-400">
+                            <li>Conducted exploratory data analysis (EDA) on large financial datasets to identify market trends.</li>
+                            <li>Created interactive Tableau dashboards for real-time tracking of portfolio performance.</li>
+                            <li>Collaborated with the engineering team to improve data collection accuracy by 25%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white dark:bg-slate-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12 text-slate-900 dark:text-white text-center">Technical Toolkit</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Python -->
+                    <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/10 hover:-translate-y-1 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-600 group text-center">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.25.345a5.25 5.25 0 00-10.5 0c0 2.9 2.35 5.25 5.25 5.25h5.25V.345zM9.75 6.405a5.25 5.25 0 00-5.25 5.25c0 2.9 2.35 5.25 5.25 5.25h5.25V6.405H9.75zM14.25 12.465a5.25 5.25 0 00-5.25 5.25c0 2.9 2.35 5.25 5.25 5.25h5.25V12.465H14.25zM18.75 18.525a5.25 5.25 0 00-5.25 5.25c0 2.9 2.35 5.25 5.25 5.25h5.25V18.525h-5.25z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">Python</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pandas, NumPy, Scikit-learn</p>
+                    </div>
+                    <!-- SQL -->
+                    <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/10 hover:-translate-y-1 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-600 group text-center">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4 mx-auto group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3s3.5-1 3.5-3V7c0-2-1.5-3-3.5-3S4 5 4 7zM13 7v10c0 2 1.5 3 3.5 3s3.5-1 3.5-3V7c0-2-1.5-3-3.5-3S13 5 13 7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12c0 2 1.5 3 3.5 3s3.5-1 3.5-3M13 12c0 2 1.5 3 3.5 3s3.5-1 3.5-3"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">SQL</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">PostgreSQL, BigQuery</p>
+                    </div>
+                    <!-- Tableau -->
+                    <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/10 hover:-translate-y-1 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-600 group text-center">
+                        <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/50 rounded-xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 mx-auto group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">Tableau</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data Visualization</p>
+                    </div>
+                    <!-- Statistics -->
+                    <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/10 hover:-translate-y-1 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-600 group text-center">
+                        <div class="w-12 h-12 bg-rose-100 dark:bg-rose-900/50 rounded-xl flex items-center justify-center text-rose-600 dark:text-rose-400 mb-4 mx-auto group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">Statistics</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">A/B Testing, Regression</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-blue-600 dark:bg-blue-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6 text-white">Let's Work Together</h2>
+                <p class="text-blue-100 text-lg mb-10">
+                    Currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to say hi!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="mailto:napha@example.com" class="px-8 py-4 rounded-2xl bg-white text-blue-600 dark:text-blue-500 font-bold hover:bg-blue-50 transition-all shadow-xl dark:shadow-blue-900/20">
+                        Send an Email
+                    </a>
+                    <div class="flex items-center justify-center gap-6">
+                        <a href="https://github.com" target="_blank" class="text-white hover:text-blue-200 transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-white hover:text-blue-200 transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-500">
+                    Napha.data
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">
+                    © 2024 Napha. All rights reserved.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#hero" class="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium">Top</a>
+                    <a href="#about" class="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium">About</a>
+                    <a href="#experience" class="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium">Experience</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
