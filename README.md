@@ -22,9 +22,9 @@ Welcome to my professional portfolio website. This project showcases my expertis
 
 ## 📂 Project Structure
 
-- `index.html`: The main entry point containing the portfolio sections (Hero, About, Experience, Skills, Contact).
-- `script.js`: Contains logic for theme switching, mobile menu, navbar effects, and intersection observer animations.
-- `style.css`: Custom CSS for scrollbar styling and base anti-aliasing.
+- `docs/index.html`: The main entry point containing the portfolio sections (Hero, About, Experience, Skills, Contact).
+- `docs/script.js`: Contains logic for theme switching, mobile menu, navbar effects, and intersection observer animations.
+- `docs/style.css`: Custom CSS for scrollbar styling and base anti-aliasing.
 
 ## 🏁 Getting Started
 
@@ -38,7 +38,7 @@ To view this portfolio locally:
    ```bash
    cd Napha-Portfolio
    ```
-3. Open `index.html` in your favorite web browser.
+3. Open `docs/index.html` in your favorite web browser.
 
 ## 📬 Contact
 
