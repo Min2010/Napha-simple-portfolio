@@ -34,6 +34,7 @@
                     <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium">
                         <a href="#hero" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
                         <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
                         <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
                         <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
                         <a href="#contact" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">Contact</a>
@@ -63,6 +64,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-1 shadow-lg">
             <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
             <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
             <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
             <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
             <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-500 font-bold">Contact</a>
@@ -93,31 +95,114 @@
 
         <!-- About Section -->
         <section id="about" class="py-20 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+            <!-- ... (existing about content) ... -->
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-50 dark:bg-slate-950">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <div class="aspect-square rounded-3xl bg-slate-100 dark:bg-slate-800 overflow-hidden shadow-2xl">
-                            <!-- Placeholder for profile image -->
-                            <div class="w-full h-full flex items-center justify-center text-slate-300 dark:text-slate-600">
-                                <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
+                <h2 class="text-3xl font-bold mb-12 text-slate-900 dark:text-white text-center">Selected Projects</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800 flex flex-col h-full">
+                        <div class="aspect-video bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Churn Modeling in Telco</h3>
+                                <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-600 dark:bg-blue-900/40 dark:text-blue-400 px-2 py-1 rounded">Prediction</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">
+                                End-to-end pipeline to predict customer churn using telecom behavioral data.
+                            </p>
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6 flex-grow">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Processed 7,000+ customer records
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Comparison: XGBoost vs Random Forest
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Achieved 82% F1-Score accuracy
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">Python</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">XGBoost</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">SMOTE</span>
                             </div>
                         </div>
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-3xl -z-10 opacity-10 dark:opacity-20"></div>
                     </div>
-                    <div>
-                        <h2 class="text-3xl font-bold mb-6 text-slate-900 dark:text-white">About Me</h2>
-                        <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                            <p>
-                                I am a passionate Data Analyst with a strong foundation in mathematics and statistics. My journey in data science began with a curiosity about how numbers can tell stories and predict future trends.
+                    <!-- Project 2 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800 flex flex-col h-full">
+                        <div class="aspect-video bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Stock Price Prediction</h3>
+                                <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-100 text-indigo-600 dark:bg-indigo-900/40 dark:text-indigo-400 px-2 py-1 rounded">Time-Series</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">
+                                Forecasting stock market trends using regression and deep learning techniques.
                             </p>
-                            <p>
-                                With experience in clean, processing, and analyzing large datasets, I've helped organizations optimize their workflows and identify new growth opportunities. I believe that the best insights come from a combination of technical rigor and domain expertise.
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6 flex-grow">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Yahoo Finance API Integration
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Moving Average Convergence (MACD)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    LSTM Model implementation
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">PyTorch</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">Pandas</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">Plotly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800 flex flex-col h-full">
+                        <div class="aspect-video bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Customer Segmentation</h3>
+                                <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-600 dark:bg-emerald-900/40 dark:text-emerald-400 px-2 py-1 rounded">Unsupervised</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">
+                                Grouping customers by behavior using RFM analysis and Clustering.
                             </p>
-                            <p>
-                                When I'm not diving into spreadsheets or writing SQL queries, you'll find me exploring new data visualization techniques or reading about the latest trends in machine learning.
-                            </p>
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6 flex-grow">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    RFM (Recency, Frequency, Monetary)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    K-Means with Elbow Method
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                    Identified 4 distinct personas
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">K-Means</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">Seaborn</span>
+                                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded">SQL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
